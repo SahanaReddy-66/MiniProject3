@@ -1,0 +1,38 @@
+<div class="registerDesign" *ngIf="registration">
+    <h4 class="head"><b>Register Here</b></h4>
+<form [formGroup]="loginForm" >
+    <label for="">First Name</label>
+    <input type="text" name="" id="" formControlName="FirstName">
+    <p class="error" *ngIf="FirstName.touched && FirstName.invalid">Please Enter Valid name</p>
+    <br>
+    <label for="">Last Name</label>
+    <input type="text" name="" id="" formControlName="LastName">
+    <p class="error" *ngIf="LastName.touched && LastName.invalid">Please Enter Valid name</p>
+    <br>
+    <label for="">Email</label>
+    <input type="text" formControlName="email" formControlName="Email">
+    <p class="error" *ngIf="Email.touched && Email.invalid">Please Enter Valid Email</p>
+    <br>
+    <label for=""> Phone No.</label>
+    <input type="text" name="" id="" formControlName="PhoneNo">
+    <p class="error" *ngIf="PhoneNo.touched && PhoneNo.invalid">Please Enter Valid Password</p>
+    <br>
+    <label for="">Password</label>
+    <input type="password" formControlName="Password">
+    <p class="error" *ngIf="Password.touched && Password.invalid">Please Enter Valid Password</p>
+    <br>
+    <label for="">Confirm Password</label>
+    <input type="password" name="" id="" formControlName="ConfirmPassword">
+    <p class="error" *ngIf="ConfirmPassword.touched && ConfirmPassword.invalid">Please Enter Valid Password</p>
+    <p class="error" *ngIf="pass">Password dosn't match</p>
+    <br>
+    <label for="">Address</label>
+    <input type="text" name="" id="" formControlName="Address">
+    <p class="error" *ngIf="Address.touched && Address.invalid">Please Enter Valid Address</p>
+    <br>
+    <button class="btn btn-primary subdesign" type="submit" (click)="Submit()">Submit</button>
+    <button class="btn btn-primary" (click)="cancel()">Cancel</button>
+    <br><br>
+    <button class="logDesign btn btn-primary" (click)="login()">Login</button>
+</form>
+</div>

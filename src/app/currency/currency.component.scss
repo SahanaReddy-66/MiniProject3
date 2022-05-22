@@ -1,0 +1,39 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .top{
+    background-color: rgb(101, 101, 228);
+    margin-top: 10px;
+    height: 50px;
+  }
+  .sidenav{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #382c2c;
+    display: block;
+    transition: 0.3s;
+  }
+  .basic{
+    background-color: aqua;
+    text-align: center;
+  }
+  input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.space{
+  margin-right: 5px;
+}
+.footer{
+  background-color: rgb(101, 101, 228);
+  color: white;
+  margin-top: 10%;
+}
+.convert{
+    margin-left: 10px;
+}
+.error{
+    color: red;
+}
