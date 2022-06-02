@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-12">
+
+    </div>
+</div>
+
+<div>
+    <mat-toolbar class="top">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Currency Conversion</span>
+        <span class="example-spacer"></span>
+        <div>
+            <label for=""><b style="font-size: 20px;">Select the Country:</b></label>
+            <select name="" id="" [(ngModel)]="selected" (change)="selecting()">
+                <option value="0">Select the Country</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="RUB">RUB</option>
+                <option value="PHP">PHP</option>
+            </select>
+        </div>
+        <div  class="design">
+            <button (click)="sendMessage()">Ok</button>
+        </div>
+        
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-toolbar>
+</div> 
