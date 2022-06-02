@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { CurrencyComponent } from './currency/currency.component';
+import { HeaderComponent } from './header/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CurrencyComponent } from './currency/currency.component';
     LoginComponent,
     RegisterComponent,
 
-    CurrencyComponent
+    CurrencyComponent,
+     HeaderComponent
   ],
   imports: [
     BrowserModule,

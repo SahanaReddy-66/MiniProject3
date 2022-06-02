@@ -13,36 +13,49 @@ export class CurrencyComponent implements OnInit {
   amount: any;
   selected: any;
   finalValue: any;
-  sharedservice: any;
-  constructor(private sharedService: SharedService,
-    private router: Router) { }
+ recMsg:any;
+  selectedreceive:any;
 
-  ngOnInit(): void {
+  constructor(private sharedService: SharedService,
+    private router: Router) {
+  
+     }
+
+  ngOnInit() {
+  
+    // console.log(this.sharedService.receiveOption());
+   // this.selectedreceive = this.sharedService.receiveOption();
+    // console.log(this.selectedreceive);
+
     this.currencyForm = new FormGroup({
       'value': new FormControl("", [Validators.required, Validators.pattern('[0-9]+')])
     })
 
   }
+  receiveMessage(event:any){
+this.recMsg=event;
+console.log(this.recMsg)
+  }
   get value(){
     return this.currencyForm.get('value')
   }
   conversion() {
-    debugger;
-    if (this.selected == "USD") {
+  
+    if (this.recMsg == "USD") {
       this.finalValue = (this.sharedService.usdConversion(this.amount)) + " US Dollars";
 
     }
-    else if (this.selected == "EUR") {
+    else if (this.recMsg == "EUR") {
       this.finalValue = (this.sharedService.eurConversion(this.amount)) + " Euro";
     }
-    else if (this.selected == "AUD") {
+    else if (this.recMsg == "AUD") {
       this.finalValue = (this.sharedService.audConversion(this.amount)) + " Australian Dollar";
 
     }
-    else if (this.selected == "RUB") {
+    else if (this.recMsg == "RUB") {
       this.finalValue = (this.sharedService.rubConversion(this.amount)) + " Russian Ruble";
     }
-    else if (this.selected == "PHP") {
+    else if (this.recMsg == "PHP") {
       this.finalValue = (this.sharedService.phpConversion(this.amount)) + " Philippine peso";
     }
 
